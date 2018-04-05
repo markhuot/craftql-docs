@@ -1,0 +1,73 @@
+---
+layout: default
+---
+
+<div class="h-page flex flex-align-items-center-ish">
+    <div class="spacing mr-100">
+        <h1 class="text-xxl">CraftQL</h1>
+        <p class="text-l">It's like <code class="color-yellow">craft.entries</code> for your API</p>
+        <p><a class="color-yellow text-underline" href="https://github.com/markhuot/craftql">Get the Plugin</a></p>
+    </div>
+    <div class="flex-grow">
+            <pre>
+                <code class="language-graphql">
+    entry(slug:"my-awesome-story") {
+        ...on Story {
+            title
+            body
+            relatedEntries {
+                title
+                url
+            }
+        }
+    }
+}</code>
+            </pre>
+    </div>
+</div>
+
+<div class="longform">
+    <h2 class="color-yellow">Huh?</h2>
+    <p>CraftQL is a zero-config plugin for <a href="https://www.craftcms.com">CraftCMS</a> that turns your existing website in to a secure GraphQL API. CraftQL analyzes your Craft sections and provides a complete GraphQL schema compatible with industry standard tools like Apollo and Relay.</p>
+    <p>Anything you can do with in a Craft template you can do with CraftQL. Seriously, anything. CraftQL aims for feature parity with <code>craft.entries</code> so you can stop worrying about your API and start developing.</p>
+    <h3>Query anything</h3>
+    <p>Fetch entries with a familiar and approachable API.</p>
+    <pre><code class="language-graphql">{
+    entries(section: news, limit: 10, order: "postDate desc", search:"body:breaking") {
+        title
+        url
+    }
+}</code></pre>
+    <h3>Full access</h3>
+    <p>All your custom fields are available via CraftQL fields, just like in a <code>.twig</code> template.</p>
+    <pre><code class="language-graphql">{
+    entries(section:news) {
+        ...on News {
+            title # the title field
+            body # a text field
+            hero { # an assets field
+                url # the image url
+                thumb: url(crop:{width: 100, height: 100}) # a cropped image
+            }
+            contactInfo { # a matrix field
+                ...on ContactInfoPerson { # a matrix block
+                    name # a field on the matrix block
+                    phone # a field on the matrix block
+                }
+            }
+        }
+    }
+}</code></pre>
+    <p>You have full access to entries, globals, assets, tags, categories, and pretty much anything else stored in Craft.</p>
+    <h3>Mutations</h3>
+    <p>Configure permissions and upsert any content in Craft with ease.</p>
+    <pre><code class="language-graphql">mutation UpsertNews {
+    upsertNews(
+        title: "My News!" # set fields just like the Craft UI
+        body: "This is my awesome news article" # set custom fields too
+    ) {
+        id
+    }
+}</code></pre>
+    <p><a href="#">Read the docs</a></p>
+</div>

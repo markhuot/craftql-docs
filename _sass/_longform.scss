@@ -1,0 +1,46 @@
+.longform {
+    line-height: 1.75;
+    color: rgba(255,255,255,0.9);
+
+    * + * {
+        margin-top: 1.75em;
+    }
+
+    * + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
+        margin-top: 75px;
+    }
+    h1 + *, h2 + *, h3 + *, h4 + *, h5 + *, h6 + * {
+        margin-top: 0;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: rgba(255,255,255,0.8);
+        font-weight: 300;
+    }
+    h1 { font-size: 72px; }
+    h2 { font-size: 48px; }
+    h3 { font-size: 32px; }
+    h4 { font-size: 24px; }
+    h5 { font-size: 18px; }
+    h6 { font-size: 16px; }
+
+    p, ol, ul {
+        max-width: 50em;
+    }
+
+    a {
+        color: #F8CC68;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    code:not([class*="language-"]) {
+        background: rgba(0,0,0,0.2);
+        padding: 5px;
+        margin: -5px 0;
+        color: rgba(255,255,255,0.75);
+        border-radius: 4px;
+    }
+}

@@ -1,0 +1,7 @@
+.spacing > * + * {
+    margin-top: 20px;
+}
+
+.spacing-huge > * + * {
+    margin-top: 100px;
+}
