@@ -30,6 +30,7 @@ pre[class*="language-"] {
 /* Code blocks */
 pre[class*="language-"] {
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
     background: rgba(0,0,0,0.2);
     padding: 20px;
     border-radius: 4px;
