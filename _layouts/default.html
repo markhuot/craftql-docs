@@ -8,7 +8,7 @@
 {%- include header.html -%}
 
 <main class="page-content" aria-label="Content">
-    <div class="wrapper longform">
+    <div class="wrapper {% if layout.longform != false %}longform{% endif %}">
         {{ content }}
     </div>
 </main>
