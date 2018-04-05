@@ -5,11 +5,18 @@
 }
 
 body {
-    background-color: #1B232C;
+    //background-color: #1B232C;
     background-color: #171E26;
     color: #fff;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    padding: 100px;
+    padding: 10px;
+}
+
+@media (min-width: 600px) {
+    body {
+        padding: 100px;
+        max-width: 1500px;
+    }
 }
 
 a {

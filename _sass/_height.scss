@@ -5,3 +5,9 @@
 .mr-100 {
     margin-right: 100px;
 }
+
+@include media('>m') {
+    .m\:mr-100 {
+        margin-right: 100px;
+    }
+}

@@ -3,11 +3,19 @@
 # only Main files contain this front matter, not partials.
 ---
 
+$breakpoints: (
+    s: 500px,
+    m: 1000px,
+    l: 1500px,
+);
+
+@import "include-media";
 @import "reset";
 
 @import "color";
 @import "flex";
 @import "height";
+@import "hide";
 @import "longform";
 @import "prisim";
 @import "spacing";
