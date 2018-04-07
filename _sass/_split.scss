@@ -1,21 +1,23 @@
-.split {
-    width: 100%;
-    float: left;
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-
-    & > * {
+@include media('>m') {
+    .split {
+        width: 100%;
         float: left;
-    }
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
 
-    & > *:first-child {
-        width: 200px;
-    }
+        & > * {
+            float: left;
+        }
 
-    & > *:last-child {
-        width: calc(100% - 200px);
+        & > *:first-child {
+            width: 200px;
+        }
+
+        & > *:last-child {
+            width: calc(100% - 200px);
+        }
     }
 }
