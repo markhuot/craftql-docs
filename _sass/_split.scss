@@ -1,0 +1,21 @@
+.split {
+    width: 100%;
+    float: left;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    & > * {
+        float: left;
+    }
+
+    & > *:first-child {
+        width: 200px;
+    }
+
+    & > *:last-child {
+        width: calc(100% - 200px);
+    }
+}

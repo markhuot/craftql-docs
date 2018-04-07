@@ -3,13 +3,25 @@
 }
 
 .text-xxl {
-    font-size: 72px;
+    font-size: 48px;
+
+    @include media('>m') {
+        font-size: 72px;
+    }
 }
 
 .text-xl {
-    font-size: 58px;
+    font-size: 24px;
+
+    @include media('>m') {
+        font-size: 58px;
+    }
 }
 
 .text-l {
-    font-size: 24px;
+    font-size: 18px;
+
+    @include media('>m') {
+        font-size: 24px;
+    }
 }

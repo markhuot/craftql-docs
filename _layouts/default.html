@@ -8,9 +8,22 @@
 {%- include header.html -%}
 
 <main class="page-content" aria-label="Content">
-    <div class="wrapper {% if layout.longform != false %}longform{% endif %}">
-        {{ content }}
+    {% if layout.longform != false %}
+    <div class="split">
+        <div>
+            {% for page in site.pages %}
+                {% if page.title %}
+                    <li><a href="/{{ page.permalink }}">{{ page.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+        <div class="wrapper {% if layout.longform != false %}longform{% endif %}">
+            {{ content }}
+        </div>
+    {% if layout.longform != false %}
     </div>
+    {% endif %}
 </main>
 
 {%- include footer.html -%}

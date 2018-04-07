@@ -28,6 +28,10 @@
         max-width: 50em;
     }
 
+    li + li {
+        margin-top: 0;
+    }
+
     a {
         color: #F8CC68;
         text-decoration: underline;

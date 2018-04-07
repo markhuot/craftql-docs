@@ -40,7 +40,7 @@ longform: false
     }
 }</code></pre>
     <h3>Full access</h3>
-    <p>All your custom fields are available via CraftQL fields, just like in a <code>.twig</code> template.</p>
+    <p>All your data is available via CraftQL, just like in a <code>.twig</code> template. That includes access to entries, globals, assets, tags, categories, and pretty much anything else you can think of.</p>
     <pre><code class="language-graphql">{
     entries(section:news) {
         ...on News {
@@ -59,7 +59,6 @@ longform: false
         }
     }
 }</code></pre>
-    <p>You have full access to entries, globals, assets, tags, categories, and pretty much anything else stored in Craft.</p>
     <h3>Mutations</h3>
     <p>Configure permissions and upsert any content in Craft with ease.</p>
     <pre><code class="language-graphql">mutation UpsertNews {
@@ -70,5 +69,5 @@ longform: false
         id
     }
 }</code></pre>
-    <p><a href="/entries">Read the docs</a></p>
+    <p><a href="/introduction">Read the docs</a></p>
 </div>
